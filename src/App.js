@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Provider } from 'react-redux';
+import { store } from './store/Store';
+import Header from './componenets/Header';
+import Sidebar from './componenets/Sidebar';
+import Taskdetails from './componenets/Taskdetails';
+import { AppContainer, TitleApp, Container } from './componenets/styledcomponenets/';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <AppContainer>
+        <TitleApp>Todo App - React Redux</TitleApp>
+        <Header />
+        <Container>
+          <Sidebar />
+          <Taskdetails />
+        </Container>
+      </AppContainer>
+    </Provider>
   );
 }
 
