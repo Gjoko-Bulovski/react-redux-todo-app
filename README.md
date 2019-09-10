@@ -1,3 +1,4 @@
+You can see a demo: https://react-redux-todo-app.netlify.com/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # How to run the application (Step by step)
